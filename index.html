@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=0, initial-scale=1.0">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>ios-video-test</title>
+  <style>
+  body {
+    overflow: hidden;
+    background: black;
+  }
+  .center {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .play {
+    background: rgba(0,0,0,0.5);
+  }
+  .button {
+    display: inline-block;
+    margin: auto;
+  }
+  canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .icon {
+    width: 25vw;
+  }
+  .info {
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.65);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 10px;
+  }
+  </style> 
+</head>
+<body>
+  <canvas></canvas>
+  <div class="center play" style="display: none;">
+    <a class="button">
+      <img src="assets/play.svg" class="icon" />
+    </a>
+  </div>
+  <div class="info">click to swap WebGL effects</div>
+  <script src="bundle.js"></script>
+</body>
+</html>
