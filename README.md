@@ -3,9 +3,9 @@
 Testing HTML5 video in iPhone5S, iOS9. Features:
 
 - Inline Playback (i.e. no full screen w/ controls)
-- Auto-Play (if muted)
-- WebGL Processing (if available; fallback with Canvas2D)
-- Landscape Hides Status Bars
+- Auto plays (if `muted` is passed)
+- WebGL Processing (if available; falls back to Canvas2D)
+- Going into landscape hides status bars
 - Letterboxing
 
 ## How Does it Work?

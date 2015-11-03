@@ -35,14 +35,17 @@
     "webgl-context": "^2.2.0"
   },
   "devDependencies": {
+    "browserify": "^12.0.1",
     "budo": "^6.0.0",
     "glsl-film-grain": "^1.0.2",
     "glsl-halftone": "^1.0.4",
-    "glslify": "^2.3.1"
+    "glslify": "^2.3.1",
+    "uglify-js": "^2.5.0"
   },
   "scripts": {
     "test": "node test.js",
-    "start": "budo index.js:bundle.js --live -- -t glslify"
+    "start": "budo index.js:bundle.js --live -- -t glslify",
+    "build": "browserify index.js -- -t glslify | uglifyjs -cm > bundle.js"
   },
   "keywords": [],
   "repository": {
