@@ -41,7 +41,8 @@ function start (err, canvasVideo) {
   console.log(fallback ? 'Using currentTime hack' : 'Using standard video playback')
 
   // in fallback + audio mode (iPhone) we need to show a Play button
-  if (fallback && canvasVideo.audio) {
+  var needsGesture = /Android/i.test(navigator.userAgent) || (fallback && canvasVideo.audio)
+  if (needsGesture) {
     var btn = document.querySelector('.button')
     var play = document.querySelector('.play')
     
