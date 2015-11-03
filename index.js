@@ -73,7 +73,7 @@ function start (err, canvasVideo) {
 
     var width = pwidth
     var height = Math.round(width / aspect)
-    var y = (pheight - height) / 2
+    var y = Math.floor(pheight - height) / 2
     
     // this is a fix specifically for full-screen on iOS9
     // without it, the status bars will not hide... O.o
